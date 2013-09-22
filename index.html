@@ -9,59 +9,55 @@ Description: A two-column, fixed-width design with a bright color scheme.
 Version    : 1.0
 Released   : 20120729
 -->
-<html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<title>Wasabi</title>
-		<link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
-		<link rel="stylesheet" type="text/css" href="style.css" />
-	</head>
-	<body>
-		<div id="wrapper">
-			<div id="header">
-				<div id="logo">
-					<h1><a href="#">Wasabi</a></h1>
-				</div>
-				<div id="menu">
-					<ul>
-						<li class="first current_page_item"><a href="#">Homepage</a></li>
-						<li><a href="ProjectBrief.html">Project Brief</a></li>
-						<li><a href="Inspiration.html">Inspiration</a></li>
-						<li><a href="#">About</a></li>
-						<li><a href="#">Links</a></li>
-						<li class="last"><a href="#">Contact</a></li>
-					</ul>
-					<br class="clearfix" />
-				</div>
-			</div>
-			<div id="inner">
-				<div id="splash">
-					<img src="images/banner.jpg" width="900" height="260" alt="" class="image" />
-				</div>
-				<div id="page">
-					<div id="content">
-						<div class="box">
-							<h2>Home</h2>
-              <!--<img class="image alignleft" src="images/pic1.jpg" width="215" height="150" alt="" /> -->
-							<p>
-							</p>
-							<br class="clearfix" />
-            </div>
-						<br class="clearfix" />
-					</div>
-				</div>
-			</div>
-			<div id="page-bottom">
-				<div id="page-bottom-content">
-					<p>
-					</p>
-				</div>
-			</div>
-		</div>
-		<div id="footer">
-			&copy; 2012 Untitled | Design by <a href="http://www.freecsstemplates.org/" rel="nofollow">FreeCSSTemplates.org</a> | Images by <a href="http://fotogrph.com/">Fotogrph</a>
-		</div>
-	</body>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="myApp">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>Wasabi</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="header">
+        <div id="logo">
+          <h1><a href="#">Wasabi</a></h1>
+        </div>
+        <div id="menu">
+          <ul>
+            <li class="first current_page_item"><a href="#">Homepage</a></li>
+            <li><a href="#/projectBrief">Project Brief</a></li>
+            <li><a href="#/inspiration">Inspiration</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Links</a></li>
+            <li class="last"><a href="#">Contact</a></li>
+          </ul>
+          <br class="clearfix" />
+        </div>
+      </div>
+      <div id="inner">
+        <div id="page">
+          <div id="content" ng-view>
+
+          </div>
+        </div>
+      </div>
+      <div id="page-bottom">
+        <div id="page-bottom-content">
+          <p>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      &copy; 2012 Untitled | Design by <a href="http://www.freecsstemplates.org/" rel="nofollow">FreeCSSTemplates.org</a> | Images by <a href="http://fotogrph.com/">Fotogrph</a>
+    </div>
+  <script src="lib/angular/angular.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
+  </body>
 </html>
