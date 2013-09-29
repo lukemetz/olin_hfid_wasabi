@@ -1,0 +1,117 @@
+<div class="box">
+  <h2> Needs Analysis </h2>
+<h4>Executive summary</h4>
+<p>Room registration systems designed to book a space on college campuses for the purpose of gathering, holding a meeting or other assembly typically operate according to one procedural model of how to get this done.  We found that this system of one-size-fits-all room registration is not appealing to many because it doesn’t take into account the varying expectations of those who seek to book this room. We would like to solve this problem specifically for small to midsized colleges. After a brief conceptual inquiry with students, faculty, and staff on two campuses, we found that users think about room registration in three general ways. In some circumstances, users need to register a specific room and will work around that room’s schedule. In other circumstances, users have a specific time they would like to meet and need to find a space to meet in.  Finally, there are some  users that treat the system more as a email, or human-to-human interaction, than as an automated system. They describe the room they would like and another human being interprets their desire and registers the room for them. Our solution will address these different user needs as well as strive to make the best possible experience.</p>
+
+<h5>Users</h5>
+<p>We found that most users typically have the same goal when reserving a room: making sure that their event runs smoothly and without any disturbances. Each user has different constraints, however, which affects the way in which he or she approaches and thinks about the task. These mental models typically fall into one of three categories: the calendar model, the database model, and the black box model.</p>
+
+<h5>Calendar</h5>
+<p>These users plan events with very specialized needs, such as play rehearsals or sporting events. As a result, they already know the “where” of their event and are primarily focused on the “when.” They care most about when a given room is free and may want to check what other events are happening in order to further coordinate their event planning.</p>
+
+<h5>Database</h5>
+<p>Some users look to room reservation systems in order to find a location for their events. While their needs are not as specific as calendar users, they need the ability to specify the basic aspect of the location as well as a time or time range when they want to meet. For example, a database user may need a room that can seat fifteen people with a projector and a whiteboard on a Friday between 1pm-2pm.</p>
+
+<h5>Black box</h5>
+<p>One final case we identified was the black box user. This user has already decided on both the time and location of their event and simply wants to enter it into the system. Their interaction is very simple: just fill in the online request form with the relevant information and submit. They do not check for availability and simply rely on a facilities manager to find an appropriate room for them.</p>
+
+<h4>Scenarios</h4>
+<p>For the calendar and database task mode, we outlined the steps involved in setting up and submitting a request. Since black box users have a relatively limited interaction and are generally satisfied with the system, we chose not to include a breakdown for them, though we do plan to consider them in our final design. The following scenarios demonstrate how users currently approach room reservations as well as the key problem areas they encounter.</p>
+
+[Setting up a meeting in a specific location]
+<p>There are a number of problems the user faces in this scenario. First, our user has to navigate two separate parts of the site to register his or her room. This results in confusion because it does match how our user may think about the problem. Our user would like to specify a location and have the system naturally flow into the finding times.</p>
+
+<p>Another key issue with this setup is the inability of the user to check on the availability of the room he or she seeks. Calendar users would like the ability to quickly browse the availability of a given room and immediately select a block of time.</p>
+
+[Finding a room for a recurring meeting]
+
+<p>There are two key elements to this scenario. First, while the current system has the ability to specify room attributes, many of the users we spoke with did not access this feature because the process of finding a room based on features does not tie into looking up the schedule for that room or submitting a request. The burden of this extra step is enough to make users prefer scouting out rooms in person.</p>
+
+<p>Secondly, since users can only check the schedule of one room at a time, users may be presented with a string of failures if they continuously encounter unavailable rooms. Not only does this cause frustration but users have reported that they feel pressured to submit their requests earlier in order to ‘claim their spot.’ One user mentioned that the process of reserving a room highlighted the lack of space at Olin. Since database users often schedule recurring meetings, these issues are particularly prevalent.</p>
+
+
+
+<h4>Outline of a solution</h4>
+<p>We’ve identified the following needs and requirements as essential elements to a successful interface for room registration. We hope not only to address present issues but to highlight some currently under-utilized features (eg. cancelling a request). We included these features despite our limited data because we believe them to be key to maximizing the utility of room registration as a whole, which is a goal of ours and will contribute to overall satisfaction on the part of our users. More details are provided below in the Rationale section of these requirements.</p>
+
+<table border="1">
+  <tr>
+    <th>Need</th>
+    <th>Requirement</th>
+    <th>Measure of success</th>
+    <th>Rationale</th>
+</tr>
+
+<tr>
+  <td>Users need to understand and be able to use the system easily and quickly.</td>
+  <td>There should be an intuitive interface</td>
+  <td>Users will be able to register a room independently and without tdaining</td>
+  <td>Many different kinds of users are going to use this system.</td>
+</tr>
+
+<tr>
+<td> </td>
+<td>The home page will direct the user on how to proceed.</td>
+<td>Users will spend less than 30 seconds on the home page.</td>
+<td>This avoids a sense of confusion on entdy which leaves the users feeling stupid and unhappy, which we don’t want.</td>
+</tr>
+
+<tr>
+  <td></td>
+  <td>There should be an efficient interface</td>
+  <td>Users should always be able to fulfill their goal in <6 min.</td>
+  <td>We don’t want the system to feel like a burden every time somebody has to reserve a room.</td>
+</tr>
+<tr>
+<tr>
+<td>The system maps our users’ conceptual models of how to reserve a room</td>
+<td>Users can find and reserve a room at a specific time.</td>
+<td>User finds this method successful and effortless.</td>
+<td>Mapping registdation procedure to how users think about the problem will reduce confusion.</td>
+</tr>
+
+<tr>
+<td> </td>
+<td>Users can find a time and reserve a specific room.</td>
+<td>User finds this method of registdation successful and effortless.</td>
+<td>Mapping to how users think about will the problem reduce user confusion.</td>
+</tr>
+<tr>
+<td> </td>
+<td>The system will support black box users, who are unselective as to time and specific location.</td>
+<td>User finds this method of registdation suitable and easy.</td>
+<td>This is the simplest and most natural way for people to think about room registdation. We want to respect this existing behavior as well as accommodate specific need users.</td>
+</tr>
+<tr>
+<td> </td>
+<td>The system will emphasize available space.</td>
+<td>The system will work around empty places, and show availability.</td>
+<td>Some users experience a lot of turn down and are constantly complaining that the school is too crowded when it’s really just the system’s failure to show what's available.</td>
+</tr>
+<tr>
+  <td>Users need to be able to get a sense of the room on the system.</td>
+  <td>The system will show images and features of a room.</td>
+  <td>Users will feel that they no longer need to scout out rooms in person before registering.</td>
+  <td>Letting users view rooms online will save time for users and the college as well as let them explore rooms they might not have thought about.</td>
+</tr>
+<tr>
+  <td>Users need to be able to cancel a room easily.</td>
+  <td>The system will make it easy and intuitive to cancel a room.</td>
+  <td>New users will be able to cancel a room request in <2 min.</td>
+  <td>Currently, users never cancel rooms. This clogs the system and is wasteful of resources.</td>
+</tr>
+<tr>
+<td>Users need to look through events and see what's happening around campus.</td>
+<td>Users can look through a list of events that are happening on campus.</td>
+<td>Users will be able to find where an event is meeting in < 4 min</td>
+<td>Some users expect this of the system, and as such we will support it.</td>
+</tr>
+</table>
+
+
+<h4>Notes on process</h4>
+<p>Due to the nature of our data-gathering process, there are several necessary limitations of scope that define and shape our project. Since our contextual inquiry did not include individuals who approve requests, we must restrict ourselves to developing a front-end interface which utilizes the same basic infrastructure as the current system. Ideally, this will allow us to focus on crafting the best interface rather than focusing too heavily on constructing a robust back-end, but it is a limitation in scope.  Secondly, since some of the features we would like to include are currently not widely utilized (canceling a request, checking a list of events), we are limited on the availability of data on which to base our design. We will have to run regular usability tests at each step in the development process. Finally, much of our contextual inquiry is focused on Olin, which has limited facilities. While we believe that we can create a design that is capable of being scaled up for larger colleges, there may be additional facets of room reservation we have not encountered and can’t predict. As a result, our solution will, to a certain extent, be tailored to Olin’s current approach and best suit similarly scaled, small schools such as ours.</p>
+
+<h4>Conclusions</h4>
+<p>In order to efficiently manage the on-campus facilities, everyone must use the system. The ultimate goal of our design is to encourage people to use the system on a day to day basis and keep the site current. By keeping all the information current on the system it will become more of a hub for meetings. Not only can users reserve meeting rooms, they can locate information regarding already existing meetings as well. This will make the site more useful for students, faculty, and staff because all the information will be updated more regularly and therefore it will be more accurate. We hope to convert the system people put off and avoid to something they love and couldn’t live without. That, to us, is the ultimate measure of success.</p>
+</div>
