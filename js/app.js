@@ -13,6 +13,7 @@ angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives', 
 
     $routeProvider.when('/projectBrief', {templateUrl: 'partials/projectBrief.html', controller: 'EmptyController'});
     $routeProvider.when('/needs', {templateUrl: 'partials/needs.html', controller: 'EmptyController'});
+    $routeProvider.when('/breakdown', {templateUrl: 'partials/divisionOfLabor.html', controller: 'EmptyController'});
     $routeProvider.when('/', {templateUrl: 'partials/index.html', controller: 'EmptyController'});
     $routeProvider.otherwise({redirectTo: '/'});
   }]);
