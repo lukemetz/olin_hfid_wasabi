@@ -1,0 +1,89 @@
+<div class="box">
+  <h2> Design Development <h2>
+
+    <h4>Developing the Prototype</h4>
+    <h5>Initial proposals</h5>
+    <p>Our main goal when first ideating about interfaces was to design around our users’ mental model. This resulted in a number of designs that split the interaction between two needs: finding a room at a given time and finding an available time for a specific room. Though we had identified other important features (canceling a room, seeing what other events may be on campus, determining the amenities of a room), our needs analysis had determined that these two needs were the most important features for users and thus, they dictated our design direction. Two sample proposals can be found below.</p>
+
+    <img class="image" src="images/designDevelopment/luke.jpg" width="50%" height="50%" alt="" />
+
+    <p>This design highlights the two general modes via the large buttons on the home page. In addition to these, there is quick search feature. This feature’s goal is to allow for a more human input of data. A user could search: “Any room with a projector free on Saturday”. The system would then be intelligent enough to locate matching rooms. While quick to operate, we didn’t think users would trust that their request had been properly communicated as the idea was not in practice elsewhere and thus too novel and unintuitive.</p>
+
+    <img class="image" src="images/designDevelopment/michael.jpg" width="55%" height="55%" alt="" />
+
+    <p>This design had a number of great features. It used a series of pages to step the user through the needed actions and included a map that allowed users to explore each room virtually. While this design had a number of good elements, we felt that there were too many steps required to complete the reservation, which made it inefficient.</p>
+
+    <p>In the ideation process, one shortcoming was our failure to generate a larger and broader pool of ideas, as we lacked creativity. As a result, and though based on valid data, we were constrained in the scope of our ideation.</p>
+
+    <h5>Finalized design</h5>
+    <p>One key goal in our design was to keep it as simple as possible and be very easy for the majority of our users. Our needs analysis showed that many of our users did not need to find the absolute best room, just one that was suitable. Thus, we chose to display a list of all available locations that could be filtered or sorted. Users could then simply browse the selection or refine their search if they didn’t immediately find an acceptable option.</p>
+
+    <p>Another goal of our design was to make it as polite as possible. Sometimes when searching for a room there are no options that exactly suit a user's needs. If this is the case, the system will provide suggestions that don’t entirely match but might still work. If there are no rooms with whiteboards available, for example, the system might suggest a room with a chalkboard or a room at a different time.</p>
+
+    <p>Another feature we included in our system is the option to cancel a room. In the existing system, users hardly ever cancel their reservations, since there was no obvious method to do. While users do not suffer any direct consequences for not cancelling unneeded reservations, the system as a whole becomes less reliable and becomes inefficient as a way to track events. Thus, the interface offers a clear method for cancelling a reservation: a button immediately next to the room request displayed on the homepage.</p>
+
+
+    <h4>Testing Paradigms and Variables</h4>
+
+    <p>In order to test our initial design, we presented users with several tasks to complete using our interface. We included scenarios that both reflected typical interactions from the initial needs analysis (finding a room with specific features, and checking the availability for a given room) and tested new features (canceling a reservation, or favoriting a location). The goal of these tasks was to assess whether our interaction supported users’ mental models.</p>
+
+    <p>We also included a scenario to acquire specific feedback on two alternate design paths for handling recurring meetings. We prepared two alternate versions of the calendar display, shown below. (See Appendix for full gallery of the paper prototype.)</p>
+
+    <img class="image " src="images/designDevelopment/calendar.jpg" width="45%" height="45%" alt="" />
+    <img class="image " src="images/designDevelopment/calendar-heatmap.jpg" width="45%" height="45%" alt="" />
+
+    <p>In version A (left), when users want to schedule a recurring event, the calendar shows the schedule for each individual date (shown along the bottom). The user then selects a time slot for each instance of his or her event. Version B (right) represents the availability as a heat map on a weekly schedule, allowing the user to select his or her desired time slot only once. If the user selects a time slot which conflicts with existing reservations, we present the user with the opportunity to change either the location or time, or simply skip the occurrence altogether.</p>
+
+    <img class="image aligntop" src="images/designDevelopment/conflicts.jpg" width="50%" height="50%" alt="" />
+
+    <p>In order to assess the usability of both versions, we asked users to schedule a recurring event at a defined location in a time slot that had a conflict.</p>
+
+    <p>After the tasks were completed, we conducted a short interview where users were asked to describe their general impression with the interface, points of frustration and confusion, and which features they found the most and least useful.</p>
+
+    <h4>Results and Discussion</h4>
+    <h5>Home page</h5>
+    <p>From the initial needs analysis, we had identified that users typically operated within two modes: checking when a desired location was available or finding a suitable location for their event. As a result, the home page prominently featured two buttons: “I have a time, help me find a room” and “I have a room, help me find a time.” We prepared an equal number of tasks for both of these modes, but during testing, we found that all users would stumble in determining which path was appropriate. Three participants preferentially selected one mode, and several reported that they felt constrained by being presented with the dichotomy at the beginning of the process. One user expressed concern that the interface offered an easy way to switch between the two modes without going back to the beginning. Another mentioned that the language of the buttons made it difficult to figure out what to do when he simply wanted to browse the availability of multiple rooms.</p>
+
+    <p>While some of points of confusion may be directly related to the testing paradigm (see Process Notes), we believe that the two modes are currently too strongly decoupled. One potential solution is to replace the buttons with drop down menus to select a time and location or to allow the users to select “Any” for either option. This would remove some of the pressure to specify either the time or location of a reservation. An additional benefit of this approach is that it would fit into the black box user’s mental model, which was not strongly supported by our current design.The need to abandon the black box was shortcoming of our work because had we succeeded, it would have been the ideal system in that it would behave like a human would, but instead be fully automated.</p>
+
+    <h5>Recurring meetings</h5>
+    <p>While none of our users had trouble navigating to the appropriate page, most could not immediately understand the heat map and some were unsure if they could proceed if the location was not always available. Four of five participants required some form of prompting to make a selection and click the ‘Next’ button to leave the screen. One user was surprised by the conflicts after selecting a green ‘mostly free’ time slot, because he associated green with ‘correct’ choices.</p>
+
+    <p>Nonetheless, all participants reported that they preferred Version B, because it offered them more flexibility: it displayed a condensed schedule of the entire week rather than just the selected days and allowed them to change both location and time of conflicted meetings. Thus, in order to reduce points of confusion, our next design iteration refined our coloring/labeling scheme for the heat map and offers additional guidance to inform users that they will be given an opportunity to resolve conflicting reservations.</p>
+
+    <h5>Reservation history</h5>
+    <p>The key feature of the reservation history page was the ability to favorite locations, which would impact how rooms are presented in future reservations. One of the users we had initially interviewed described this as her favorite feature. During testing, however, most users were ambivalent toward it. One suggested that the functionality could simply be incorporated into the room selection page. As a result, we may choose to remove this page in the next iteration of our interface.</p>
+
+    <h4>Process Notes</h4>
+
+    <h5>Testing paradigm</h5>
+    <p>In order to operate our testing sessions in a consistent and systematic manner, we presented each user with the same set of tasks to complete. We intentionally did not specify all the parameters within the scenario, so we could observe the different ways in which users approached each problem and potentially find patterns that would inform the next prototype. The lack of specificity confused many users however, particularly during the task that required users to resolve scheduling conflicts. All five users spent extra time trying to decide whether to reschedule, relocate, or skip the conflicting meeting. Since they were not personally invested in the task, they were uncertain which path was ‘correct.’ Similarly, our mode of testing made users more willing to explore all aspects of the interface, even if it deviated from their typical behavior. One user noted that while he would always use the room selection tool, he would select the calendar page when the task description implied that it was the most efficient path. This may have introduced artifacts into our analysis as some users were adjusting their mental model to suit our interface rather than the opposite. While we did yield a number of valuable insights from our testing scheme, we should have first asked users to navigate the interface to complete a reservation they had recently made.</p>
+
+    <p>Finally, there were search results that might arise in the use of our system for which we have not tested. These include, for example, a search yielding zero results which meant that we might have missed a usability issue.</p>
+
+    <h5>Unaddressed requirements</h5>
+    <p>When reviewing our requirements at the end of this phase, we found that our first iteration did not adequately address two of our key requirements, specifically facilitating the black box user’s mental model and allowing users to get a visual sense of the size and layout of the room. While some of our initial ideas included features that supported both of these needs (see Developing the Prototype), when we moved away from those proposals, we did not offer alternatives to fit into the testing prototype. We are currently brainstorming ways to fulfill these requirements within the current structure of our design. This may be particularly difficult for the black box model, as we have found that users who follow the other two paradigms appreciate guidance throughout the process. Due to time constraints, we do not believe it is feasible to restructure in its entirety our design. Ideally, we would be able to generate and test these additional features within a cohesive design, but we acknowledge that we may need to drop support for this subgroup of users.</p>
+
+    <h4>Appendix: Paper Prototype</h4>
+    <p>Based on our user needs, we constructed a preliminary model of our website. The following interaction flow shows how users might navigate the site throughout the process of reserving a room.</p>
+
+    <img class="image aligntop" src="images/designDevelopment/homepage.jpg" width="50%" height="50%" alt="" />
+    <p>We wanted our home page to direct users easily to the information they desired. In order to accommodate both modes of reservation (see Needs Analysis), we included two large buttons to help users to directly look up the schedule of a room or find a room that accommodates their schedule. The “Your Current Events” panel allows users to check on the status of their reservation quickly as well as cancel events with one click. If they have just completed a request, a message will appear in order to confirm the submission. The “Upcoming Events” panel displays featured events and also includes a search function to check the time and location of an event.</p>
+
+    <img class="image aligntop" src="images/designDevelopment/findaroom.jpg" width="50%" height="50%" alt="" />
+    <p>For users who need to find a room, we present a list of all available rooms at a time specified by a user. Users may select items on the sidebar in order to filter the results. The results may be sorted as well by clicking on a column heading within the list. If no rooms perfectly meet a user’s needs, the list instead shows rooms which almost meet the specifications. Each list item will include a note indicating which features could not be accommodated.</p>
+
+    <img class="image " src="images/designDevelopment/calendar.jpg" width="45%" height="45%" alt="" />
+    <img class="image " src="images/designDevelopment/calendar-heatmap.jpg" width="45%" height="45%" alt="" />
+    <p>For this page, we took inspiration from a number of calendar applications. Both approved and tentative reservations are highlighted on the week-long schedule. Time slots can be selected either by clicking and dragging or manually entering in the time in the text field. For recurring events, the total availability is presented as a heat map (right). Users can hover over a block of time to see how many conflicts exist within the time slot.</p>
+
+    <img class="image aligntop" src="images/designDevelopment/conflicts.jpg" width="50%" height="50%" alt="" />
+    <p>For recurring meetings, if users select a time slot which is not always available, we present them the opportunity to relocate, reschedule or skip the conflicting reservation. Choosing one of the first two options will direct users to either the calendar or room selection page. See Testing Paradigms and Variables for more details.</p>
+
+
+    <img class="image aligntop" src="images/designDevelopment/confirmation.jpg" width="50%" height="50%" alt="" />
+    <p>After the user successfully selects either a time or a room, he or she is taken to the request submission page, where basic information such as event name, contact, and privacy level is filled in. He or she may also review his or her request on this page before completing the request.</p>
+
+    <img class="image aligntop" src="images/designDevelopment/history.jpg" width="50%" height="50%" alt="" />
+    <p>The history page can be accessed from the homepage. A key feature of this page is the ability to favorite locations. A starred location will appear at the top of the list when looking for a room.</p>
+</div>
