@@ -16,6 +16,7 @@ angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives', 
     $routeProvider.when('/breakdown', {templateUrl: 'partials/divisionOfLabor.html', controller: 'EmptyController'});
     $routeProvider.when('/interaction', {templateUrl: 'partials/interaction.html', controller: 'EmptyController'});
     $routeProvider.when('/designDevelopment', {templateUrl: 'partials/designDevelopment.html', controller: 'EmptyController'});
+    $routeProvider.when('/onlinePrototype', {templateUrl: 'partials/onlineprototype.html', controller: 'EmptyController'});
     $routeProvider.when('/', {templateUrl: 'partials/index.html', controller: 'EmptyController'});
     $routeProvider.otherwise({redirectTo: '/'});
   }]);
