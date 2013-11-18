@@ -1,0 +1,67 @@
+<div class="box">
+  <h2>Design Refinement</h2>
+
+  <h4>1. The Design</h4>
+
+  <p>Our original design was focused on the two mental models we discovered  in the previous phases through interviews with our users. These models act in parallel. Users who have a specific room in mind take one path, while users who have a specific time in mind and require a room to match that need, take another. This basic premise, while ultimately found limiting, nonetheless dictated our earlier designs. Our homepage attempts to show this split.</p>
+  <img class="image" src="images/designRefine/homeOnline.png" width="60%" height="60%" alt="" />
+<p>Upon entering our room reservation site, users are prompted with an input field. If the user knows what room he or she wants, the user can type the specific request and will be redirected to the availability of that specific room. If the user does not have a specific room in mind, he or she can start the reservation process by submitting the default value “any”.</p>
+  <img class="image" src="images/designRefine/calendar.png" width="60%" height="60%" alt="" />
+<p>The calendar page assumes the user already has a room in mind and displays the next decision point: availability. This interface allows the user to select an available time visually instead of through text inputs. When interviewing our users about the current system, they found it difficult to parse the information of room availability as it currently was being returned.  The current site returned a table of all of the reservations of that room in the time range specified.  Additionally, it was confusing for our users that the times returned were times that the room was taken instead of available.   As such, we had an internal discussion which lead to the realization that a visual approach better maps to how users think about time. Users can also schedule weekly recurring meetings by checking the weekly button. Again, a visual display of time is triggered which fits our user’s instincts.</p>
+
+  <img class="image" src="images/designRefine/roomSelect.png" width="60%" height="60%" alt="" />
+<p>A user without knowledge of the room he or she wants is directed to the room select page. Here he or she can enter a time and parameters (projector, chalkboards etc.) and view the list of available rooms that meet these specific needs. Once again, recurring meetings can be scheduled by pressing the recurring button.</p>
+
+  <img class="image" src="images/designRefine/Conflict.png" width="60%" height="60%" alt="" />
+<p>One issue with scheduling recurring meetings is when a conflict appears on one or more specific days. Our system helps users who experience this problem by directing them to a page that lets them manage conflicts. Most of the time users will just skip the conflicted time, as users reported, but they can also choose to change the time or the location of the meeting, which provides a welcome layer of control for those who seek it.</p>
+
+  <img class="image" src="images/designRefine/confirm.png" width="60%" height="60%" alt="" />
+<p>Once the user has specified a room and a time, he or she is directed to the confirmation page. This page confirms for the user that his or her information is set up correctly. It also gives them a place to enter information about the reservation.</p>
+
+<h4>2. What Changed in Our Design</h4>
+
+<p>Our system has gone through a number of iterations to get to this point and is still far from perfect.</p>
+  <img class="image" src="images/designRefine/home1.jpg" width="46%" height="50%" alt="" />
+  <img class="image" src="images/designRefine/home2.jpg" width="46%" height="50%" alt="" />
+<p>The first main change and the most discussed change we made was to our homepage. Through out user testing, we discovered that our main entry point into our application was causing people trouble. As shown above, a user can hit “I have a time help me find a room”, or “I have a room help me find a time”. While this works great if a user only knows only a time or only a room, the site is problematic considering possibilities outside of or straddling our two model approach. For example, how would a user with a time range in mind continue with our reservation system? Or what about the user who needs a room in the AC on the first floor that has a projector? Our feedback told us that users who did not fit neatly into our two-model approach were unsure how to proceed.</p>
+
+<p>The other issue users had with this design was the 2 text heavy buttons. Most users just didn’t have the patience and were annoyed at having to compare the two. We attempted to rectify this by modifying the two buttons into one room input which users found more efficient.</p>
+
+<img class="image" src="images/designRefine/newhome.png" width="60%" height="60%" alt="" />
+<p>While we thought this would help make the divide in information a little smoother, the results of our heuristic analysis proved otherwise. One evaluator when presented with the input related it to a search bar and thus never found half of our site. As we came to learn, it turned out that in approaching our site, almost all of our users didn’t understand that the text box served two functions. This led to confusion about the split design. In the coming phase we plan on once again revising this page to show more appropriately show the split between pages. Our initial concept is to show an input field with submit button to specify a room and another button to send users to the room list page. This design clarifies that there are two separate paths to take and should cut down, if not eliminate, we hope, ambiguity in this regard.</p>
+
+<img class="image" src="images/designRefine/history.jpg" width="60%" height="60%" alt="" />
+<p>Another large modification we made after user testing was to remove the history page. None of our users particularly valued this page. At most it functioned as a curiosity, but most didn’t access or care about it. One user said it best when he remarked that “Cool, but i probably won’t use it”. After reflecting as a team we felt this page was just a waste of space and time, and cluttered and encumbered our design, we decided to drop it.</p>
+
+<p>One final big limitation to the development of our design and in particular on our ability to create an effective online prototype was time.  Ideally we would have preferred to implement a fledged interface to better understand how users would respond. Some of the smaller usability enhancements that our group discussed likewise got dropped, and we were racing against the clock to fix a few too many usability-affecting bugs uncovered in our software. Much of the feedback from our heuristic analysis concerned things such as back buttons not redirecting properly or data not forwarding or populating properly--the oversights of trying to do too much in too short of a time. Further, to speed up implementation, our team decided not to implement the full database backend which would have allowed for better detection of reservation conflicts. This caused problems for a few of the evaluators who were concerned that they could reserve the same room at the same time multiple times.</p>
+
+<p>It was also the case that in our transition from paper to an online prototype, and up against the clock, more complicated features were not implemented. Our system was designed to be as polite as possible. Instead of returning a result of no rooms, for example, we had hoped that it would suggest some rooms that might work, or give advice how to revise a user request. We wanted inputs to be smart and predictive, as evidenced by providing an autocomplete as well as the ability to submit a request using various descriptions, such as CC102 or CC 102 or the more vernacular Crescent room. While great for usability, these features fell by the wayside as time ran out.</p>
+
+<h4>3. Our Insights</h4>
+
+<p>During this phase we have learned three important facts: First, the users’ mental models are not as separate as we thought. Next, site feedback that a particular function has been executed is important to our users even if a process can be done instantaneously. Finally, users want control, not just ease of use or efficiency.</p>
+
+<p><strong>a.</strong> One of our more significant insights concerned our initial split in design. Since we have found that there are two mental models when it comes to reserving rooms, database and calendar, we have treated them like they are two mutually exclusive categories. A user will either be put into the database model or the calendar model. From design feedback, however, we learned that rather than being independent, either/or, determinations, the two models are related in a gradient fashion, as shown to us in two examples:</p>
+
+<p>In the first, the user wants to reserve a room in a given time range. Instead of reserving a room Monday 8pm, for example, a user might state that he/she needs a room Monday night. With this request, the user has neither a specific room nor a specific time but characteristics of both mental models: any room within this general time frame. This scenario occurs with users who have yet to tighten down their plans, so they desire a wide range of selection possibilities.</p>
+
+<p>The second scenario that pointed to a continuum of need over a strict split of desire inherent in our initial design of a two mental model approach, was the circumstance where a user wants a room with specific characteristics. For example if a user wants a room with a projector at Tuesday, 10pm, for example, this request has characteristics of both models and as such doesn’t quite fit our initial approach of a decision point split between only two option. We thought that adding the “Amazon Style” filter function would account for this model but since we pipe users into either one of two choices the phrase “I have a time, help me find room” is misleading since the user does have some notion of what type of room is desired.</p>
+
+<p><strong>b.</strong> Another important fact that we found was that users want to notice when a process is running rather than have process happen instantaneously. They want the confirming feedback that if they are using a function, a noticeable effect will take place. This was discovered when other designers were evaluating our design. When they chose to filter rooms in the room selection page using the “Amazon-Style” filter function, the rooms filtered too quickly and the testers couldn’t be sure if the room selections had changed. This left the testers confused as to whether their use of the function was successful.</p>
+
+<p><strong>c.</strong> Finally, we realized the depths to which users would like control over the process, not just ease or efficiency of use. This was perhaps best illustrated by the concerns about non functional back buttons, or the inability to edit existing reservations.</p>
+
+<h4>4. Open Questions</h4>
+
+<p>We have <strong>three questions</strong> that we have to answer when it comes to refining our design.</p>
+
+<p>How would we alter and user test the homepage with the aim of reducing user confusion?</p>
+<p>Since we are now saying that the relationship between the two mental models is more of a gradient rather than a strict divide, we will have to find a way how to account for this in our design. It would probably be beneficial to go back out to our users and collect data about what information they have and what information they want when going into a system.</p>
+
+<p>How much scheduling latitude can we afford users who know exactly what they want?</p>
+<p>For example should a user who knows that he/she wants AC 103 at 8:00PM be able to submit a request right at the homepage or do we make the user go through a series of steps? If they can submit this request at the homepage, what happens if the room isn’t available at that time?  Would it be something similar to the ‘conflict page’ for recurring meetings? Is that the best, most polite response to our “certain-minded” users? It is important to understand that a user that knows exactly what he/she wants is not the same as a frequent/power user.</p>
+
+<p>How will we account for frequent/power users?</p>
+<p>Even though we have not encountered any users we might regard as frequent users, whom we refer to as power users, we presume they do or could exist and need to investigate the possibility of providing shortcuts to serve this niche category of users. This also makes us wonder if there are any other specific categories of users (like the power user) whose specialized needs should be considered.</p>
+
+</div>
