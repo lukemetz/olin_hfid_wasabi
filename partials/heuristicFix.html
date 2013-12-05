@@ -1,0 +1,59 @@
+<div class="box">
+  <h2>Heuristic Evaluation Follow-up</h2>
+
+  <p>After receiving our heuristic evaluations, our team came up with solutions to fix each of the problems that were found.</p>
+
+  <u>The following issues where rated as a major usability problems and were a priority to fix.</u>
+  <br>
+
+  <b>Issue #1: “It is not made transparent to the user how to access the complete room listing. Instead, the action is implemented as default functionality.”</b>
+  <p>Solution: The new homepage now gives user the option to view a room or book a specific room. The goal of this design is to make the separate modes of operation transparent without constraining the user.</p>
+
+  <b>Issue #2: “After creating an event, you can't go back to see the details of the room or the time for which the event was scheduled.”</b>
+  <p>Solution: More information has been added to the reservation table on the homepage to provide more information about the time, date, and status of a reservation request. The room information can also be viewed on the details page (not yet implemented.)</p>
+
+  <b>Issue #3:” A user needs assurance that entering a room number and time will reserve that slot, preventing other users from taking up that slot. It doesn’t appear that there is currently a room collision system, since room numbers are typed by hand and could have different conventions.”</b>
+  <p>Solution: We will be implementing a type-ahead which will give some indication that the system understands what room the users wants. Due to limitations on how our backend is set up, preventing conflicting reservations is infeasible. However, we have added a status indicator, which will inform users whether their reservation has been accepted.</p>
+
+  <b>Issue #4: “When I cancel a room immediately after creating it,the notification that says, “Your room request has been submitted for approval. Expect an email with a confirmation,” remains. This makes it unclear whether the room I just saved and cancelled is still saved or cancelled.”</b>
+  <p>Solution: The notification now disappears when a reservation is cancelled.</p>
+
+  <b>Issue #5: “The “back” button on the confirmation page does not take the user back to the same screen if coming from the room-specific booking page. This is illogical because I see a page that I have never seen before and cannot get back to the page I was looking at before.”</b>
+  <p>Solution: This is bug has been fixed. The back button on the confirmation page now returns users to the appropriate page.</p>
+
+  <b>Issue #6: “Room numbers should not be typed by hand because there is a finite set of rooms. Room numbers are typed by hand at the moment. I would suggest an autocomplete filtering function here.”</b>
+  <p>Solution: An autocomplete function has been implemented both on the home and the calendar page.</p>
+
+  <b>Issue #7: “I tried to book the room using the room search page, except because there was a conflict during the time that I entered for one of the recurring dates, the room did not show up at all for the other three dates. There was no way to book AC 109. The only way to book the room and resolve the conflicts was to go back to the home page and directly type in AC 109.”</b>
+  <p>Solution: This bug with our backend has now been resolved.</p>
+
+  <b>Issue #8: “The recurring event does not get scheduled for the start date.”</b>
+  <p>Solution: This bug has now been resolved.</p>
+
+  <b>Issue #9: “Allows submission of room registration without room number, time, or date. Does not indicate that there is a problem.”</b>
+  <p>Solution: It is no longer possible to proceed to the confirmation page without specifying room, time, and date.</p>
+
+  <u>The following problems were rated as minor usability issues and a lower priority to fix.</u>
+  <br>
+
+  <b>Issue #10: “In a user’s reservations listing, there is no differentiation between private and public events. This is an extremely important distinction which might be made by indicating private events with a marker or by having a separate listing for private events.”</b>
+<p>Solution: We felt that this was not necessary for the table on the homepage. It will be made available through the details page (not yet implemented).</p>
+
+
+<b>Issue #12: “Why is there the option to both type the date, and select it on the large calendar, when only one will be used? What happens if I use a different date in each?”</b>
+<p>Solution: The date input field is intended as a navigation tool. Entering a date moves changes the calendar view to the week of that date. Selecting a different date now also updates the value of the date field.</p>
+
+<b>Issue #13: “Undo and redo not supported on room choice page. Once the user leaves the page they no longer have access to change the information (without inputting it all again).”</b>
+<p>Solution: Fixing the back button for issue #5 will allow the user to modify their choice if they choose so.</p>
+
+<b>Issue #14: “User cannot go back to the homepage once you get to the search page. Leads to feeling trapped by the system.”</b>
+<p>Solution: We have added a header to every page of our site with “Room Registration” on it. Much like many existing sites, this will link to the homepage.</p>
+
+<b>Issue #15: “One of the dates showed up as “13/10/2013” while all the other ones are in standard US format.”</b>
+<p>Solution: The dates are now all in standard US format: mm/dd/yyyy</p>
+
+
+
+
+
+</div>

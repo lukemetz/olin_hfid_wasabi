@@ -19,6 +19,7 @@ angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives', 
     $routeProvider.when('/onlinePrototype', {templateUrl: 'partials/onlineprototype.html', controller: 'EmptyController'});
     $routeProvider.when('/designRefine', {templateUrl: 'partials/designRefine.html', controller: 'EmptyController'});
     $routeProvider.when('/usability', {templateUrl: 'partials/usability.html', controller: 'EmptyController'});
+    $routeProvider.when('/heuristicFix', {templateUrl: 'partials/heuristicFix.html', controller: 'EmptyController'});
     $routeProvider.when('/', {templateUrl: 'partials/index.html', controller: 'EmptyController'});
     $routeProvider.otherwise({redirectTo: '/'});
   }]);
