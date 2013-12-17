@@ -1,0 +1,68 @@
+<div class="box">
+  <h2>Final Refinement</h2>
+
+
+  <h3>Introduction</h3>
+  <p>This project is about creating a campus room reservation system for small to mid-sized colleges. Our current design is based on mental models compiled from a number of user interviews and refined through two usability evaluations. The final prototype seeks to maximize learnability, which affording users as much control and flexible as possible in designating their reservations.</p>
+
+  <h3>Design requirements</h3>
+  <p>While students, professors, and administrative staff all utilize room reservation systems, most have reported that they only interact with the system less than five times a semester. Thus, a key requirement of our design was a shallow learning curve. In addition, the diverse nature of reservations (eg. scheduling meetings, booking classrooms, holding events, etc.) necessitates interactions that favor user choice over automation. Finally, a key theme throughout the design is the ability to support the multiple <a href=/#/needs>mental models</a> associated with room reservation.</p>
+
+  <h3>Home page</h3>
+  <i>Initial design</i>
+  <p>During our initial user inquiries, we identified that room reservations were typically initiated with one of two modes: checking the availability of a specific location or finding a location that was free at a specific time. As a result, our first design prominently featured two buttons with the text “I have a room, help me find a time” and “I have a time, help me find a room.”</p>
+
+  <img class="image" src="images/final/home.jpg" width="60%" height="60%" alt="" />
+
+  <p>During paper prototyping, however, users had a number of issues with this dichotomy.  (See <a href=/#/designDevelopment>Design Development</a> for more details.) One major concern was that the language of the buttons felt constraining and could not appropriately capture the hybrid needs that appeared to partially span both options. For example, users who wanted to schedule a meeting in the evening in a specific building would not understand which path would be more appropriate. While our room selection page could support this interaction, this was not adequately communicated on the home page.</p>
+
+  <i>First online prototype</i>
+  <p>In order to provide better support for intermediate needs, the two buttons were replaced with a single text field, which could be used to specify a location. By default, the field would state “any,” which would bring users to a room selection page, while specifying a particular room would bring users to the calendar page. The goal of this design was to encourage users to specify only the information that was available to them and allow the system to decide how it should proceed.</p>
+
+  <img class="image" src="images/final/firstonline.png" width="60%" height="60%" alt="" />
+
+  <p>However, we found that obscuring the dual nature of our interface only introduced additional confusion. During the heuristic evaluation, some users only utilized the calendar page to complete the tasks and were unaware that the room selector existed. In this case, the core issue was the fact that users would not be able to specify location requirements unless they initially selected ‘any’ room. Cognitively, they did not interpret this need as being fulfilled by ‘any’ room, and, once again, the full functionality of the system was left unclear. Similarly, users reported that the choice to have one interface element produce two potential outcomes felt inconsistent, and they disliked the lack of control in determining how best to complete the reservation.</p>
+
+  <i>Usability testing</i>
+  <p>Following the heuristic evaluation, we produced two alternative designs, which we took to a <a href=/#/usability>Usability Study.</a></p>
+
+  <img class="image" src="images/final/usa1.png" width="40%" height="40%" alt="" />
+  <img class="image" src="images/final/usa2.png" width="40%" height="40%" alt="" />
+
+  <p>The first design utilized the initial two-button system, but the language was refined to more clearly communicate the purpose of the two paths: “Help me find a room” and “Reserve a specific room.” The second kept the text box, but also included a “View all rooms” button. Both versions aimed to clearly denote two separate methods of completing a reservation without implying excessive limitation. As the two participants each prefered a different interface, the results of this study were not conclusive. Both participants did note, however, that they prefered labeling of the room selector button as “Help me find a room,” which better afforded the concept of initiating a room request than “View all rooms.” In our final prototype, we chose the second version with the labeling that provided the best clarity (“Help me find a room”). We felt that the graphical distinction between the two modes would allow a user to more quickly identify which option was more appropriate for his or her needs.</p>
+
+  <h3>Room selection page</h3>
+  <img class="image" src="images/final/roomtop.png" width="60%" height="60%" alt="" />
+
+  <p>The room selection page helps users who know a specific time and need to locate a room in that time. When first entering this page, users are greeted with the list of all available rooms. Users can then input their desired parameters, such as time and date, building, and room feature, in order to filter the results. The latter options can be accessed through a sidebar on the left, similar to Amazon’s category system. Currently, the options available are the most commonly referenced from user interviews, though a live system would provide a more extensive listing. Users can also check the availability of a specific room using the search bar.</p>
+
+  <p>The goal of this design is to support experimentation to get a sense of availability and allow users to quickly modify their requirements in order to optimize their results. We found that users prefered this filtering style to a more powerful search bar, because it allowed them to quickly identify the options within the system and could more easily handle a large number of filters. In addition, by removing the burden of repeatedly entering the same information, users reported that they feel more confident in their ability to find the best room to suit their needs. Furthermore, users appreciated the ability to directly proceed to completing their reservation after selecting a room, which offers a more continuous experience compared to other systems.</p>
+
+  <p>One additional feature which was not implemented was the ability to make suggestions if a set of filters returned no results. Currently, we do not have sufficient research to understand trends in how users prioritize the features of their reservation. For example, if no rooms in the  AC with a projector are available, would it be better to suggest a room in MH with a projector or another room in the AC without a projector? Or even a room at a different time?</p>
+
+  <h3>Calendar</h3>
+  <img class="image" src="images/final/cal.png" width="60%" height="60%" alt="" />
+  <p>For users who need a specific location, reservations are handled through the calendar section of the site. This page presents a schedule of that particular room (specified on the home page), modeled after standard calendar applications, such as Outlook or Google Calendar. The advantage of this design is that it allows users to quickly identify availabilities for a room.</p>
+
+  <p>One key feature of this page is the process of scheduling recurring meetings. When users select the option for a weekly event, all of the meetings on each day over the specified time are overlayed and color-coded according to the number of conflict within a given time slot. Rooms that are busy over the entire period are shaded red, where rooms that are only busy once are a light yellow. Hovering over the time slot also provides a tooltip, which indicates the specific number of conflicts. During testing, users liked the fact that this methods allows the information to be condensed and viewed at once. In addition, users only need to select the time slot once for all of their recurrences, just as it is for reserving a single meeting. This consistency allows our users a seamless transition between the two types of reservations.</p>
+
+
+  <img class="image" src="images/final/conflict.png" width="60%" height="60%" alt="" />
+  <p>If a user schedules a reservation that is conflicted, he or she is directed to the conflict page. Once again we try to portray the information as clearly as possible. Available reservations are shaded green, with conflicted times in red. The user can either reschedule his or her blocks using one of the two described paths, or just skip the event altogether for that conflicted day and time. Users appreciated this level of control, despite the additional complexity, because they felt that this was a decision that should be evaluated on a case-by-case basis.</p>
+
+
+  <h3>Conclusion</h3>
+  <p>As previously described, the key goals of this design was to provide a highly learnable interface that was both flexible to user needs and allowed increased control over the room reservation process. We utilized familiar interfaces to reduce the burden of re-acquiring skills between usages. In addition, we allow users to search for rooms quickly as well as well as work around the schedule of a specific room.</p>
+
+  <p>At this time, our system is lacking a number of things our users would expect in a reservation system, such as the ability to edit reservations and view more details on specific rooms, as well as a backend that tracks reservations and ensures that no rooms are conflicted. In addition to these features, we would like to add more features that assist the user in his or her reservation search, such as smart suggestions of availability options. Given time to pursue this design further, we would work on these aspects. Still, our current proof of concept is enough to demonstrate a viable and useful system that is responsive to our users and a big improvement over where we began.</p>
+
+  <h3>Appendix</h3>
+  <img class="image" src="images/final/revhome.png" width="60%" height="60%" alt="" />
+  <p>On the homepage, users can quickly access both the calendar and room selection features of the site. They can also browse public events and see a summary of their reservations, including location, time, date, and status. Additional details such as room features, would appear on a separate details pane which is not yet implemented. Reservations can also be canceled from the home page.</p>
+  <img class="image" src="images/final/calap.png" width="60%" height="60%" alt="" />
+  <p>The calendar page provides an agenda-style schedule for the reservation within a particular room. Users click and drag to select desired a time slot. The date box allows users to quickly navigate to a specific date. Users can also schedule weekly events from this page.</p>
+  <img class="image" src="images/final/roomtop.png" width="60%" height="60%" alt="" />
+  <p>The room selection page displays a list of all available rooms, which can be filtered by time and date, building, capacity, and a number of features. The headings on the top of the list can also be used to sort the results.</p>
+  <img class="image" src="images/final/confirm.png" width="60%" height="60%" alt="" />
+  <p>The confirmation page allows users to enter any additional information that is necessary for the facilities manager to record and approve the reservation. They can also look over the details of their reservation and make any necessary adjustments.</p>
+</div>
